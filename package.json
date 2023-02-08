@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VitorMeloDS/current-date.git"
+    "url": "git+https://github.com/VitorMeloDS/instant-time.git"
   },
   "author": "vitor.melo <vmsvitor20@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/VitorMeloDS/current-date/issues"
+    "url": "https://github.com/VitorMeloDS/instant-time/issues"
   },
-  "homepage": "https://github.com/VitorMeloDS/current-date#readme"
+  "homepage": "https://github.com/VitorMeloDS/instant-time#readme"
 }
