@@ -1,5 +1,4 @@
 /**
- * 
  * @param {Date} date Data que deseja formatar.
  * @returns {String} Retona uma string contendo a data com o formato especificado.
  */
@@ -12,11 +11,8 @@ function DateFormat (date) {
     hour: 'numeric',
     minute: 'numeric',
     second: 'numeric',
-    hour12: false,
-    weekday: 'long'
+    hour12: false
   }).formatToParts(date).map(({type, value}) => value).join('');
 }
 
-let result = DateFormat(new Date());
-
-console.log(result);
+module.exports = DateFormat;
