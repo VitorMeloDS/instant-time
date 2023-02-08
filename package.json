@@ -1,6 +1,6 @@
 {
-  "name": "instante-time",
-  "version": "1.0.2",
+  "name": "instant-time",
+  "version": "1.0.3",
   "description": "* Projeto criado para facilitar o dia á dia dos programadores em relação a formatação de data.",
   "main": "index.js",
   "scripts": {
