@@ -1,18 +1,17 @@
 {
-  "name": "dateTime-format",
+  "name": "instante-time",
   "version": "1.0.0",
   "description": "* Projeto criado para facilitar o dia á dia dos programadores em relação a formatação de data.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "vitor.melo <vmsvitor20@gmail.com>",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/VitorMeloDS/current-date.git"
   },
+  "author": "vitor.melo <vmsvitor20@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/VitorMeloDS/current-date/issues"
   },
