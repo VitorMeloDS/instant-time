@@ -15,4 +15,6 @@ function DateFormat (date) {
   }).formatToParts(date).map(({type, value}) => value).join('');
 }
 
-module.exports = DateFormat;
+module.exports = {
+  DateFormat
+};
