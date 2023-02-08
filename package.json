@@ -1,12 +1,20 @@
 {
-  "name": "formatdate",
+  "name": "current-date",
   "version": "1.0.0",
-  "description": "",
+  "description": "* Projeto criado para facilitar o dia á dia dos programadores em relação a formatação de data.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "vitor.melo <vmsvitor20@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitorMeloDS/current-date.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VitorMeloDS/current-date/issues"
+  },
+  "homepage": "https://github.com/VitorMeloDS/current-date#readme"
 }
