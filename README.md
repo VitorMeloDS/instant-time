@@ -5,7 +5,7 @@
 * Installation
 
   ```bash 
-  npm i instant-time
+  npm i instant-time-js
   ```
 
   
@@ -13,7 +13,7 @@
 * Use
 
   ```bash
-  const { DateFormat } = require('./index');
+  const { DateFormat } = require('instant-time-js');
   
   let dateResult = DateFormat(new Date()); // Returns 08/02/23 20:31:50.
   ```
