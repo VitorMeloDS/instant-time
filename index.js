@@ -23,7 +23,7 @@ function optionsDateTime(options) {
         timeZone: 'America/Sao_Paulo',
         day: '2-digit',
         month: '2-digit',
-        year: '2-digit',
+        year: 'numeric',
       };
 
       break;
@@ -32,7 +32,7 @@ function optionsDateTime(options) {
         timeZone: 'America/Sao_Paulo',
         day: '2-digit',
         month: '2-digit',
-        year: '2-digit',
+        year: 'numeric',
         hour: 'numeric',
         minute: 'numeric',
         second: 'numeric',
@@ -45,7 +45,7 @@ function optionsDateTime(options) {
         timeZone: 'America/Sao_Paulo',
         day: '2-digit',
         month: '2-digit',
-        year: '2-digit',
+        year: 'numeric',
       };
     }
 
