@@ -15,7 +15,7 @@
   ```bash
   const { DateFormat } = require('instant-time-js');
   
-  let dateResult = DateFormat(new Date()); // Returns 08/02/23 20:31:50.
+  let dateResult = DateFormat(new Date()); // Returns 08/02/23.
   ```
 
   
