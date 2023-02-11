@@ -1,55 +1,29 @@
+const { optionsDateTime } = require('./utils/maskDate')
+
 /**
- * @param {Date} date Data que deseja formatar.
+ * @param {Date} date Date you want to format.
  * @param {String} options mascara options 'dd/mm/yyyy' ou 'dd/mm/yyyy hh:mm:ss'.
- * @returns {String} Returns a string containing the date with the specified format.
+ * @returns {String | Function} Returns a string containing the date with the specified format.
  */
 function DateFormat(date, options) {
-  return new Intl.DateTimeFormat('pt-BR', optionsDateTime(options)).formatToParts(date).map(({type, value}) => value).join('');
-}
+  let resultDate = new Intl.DateTimeFormat('pt-BR', optionsDateTime(options?.toLowerCase()))
+    .formatToParts(date).map(({ type, value }) => {
+      if (options) return options.includes('-') ? (value == '/' ? '-' : value) : value;
 
-/**
- * @param {String} options mascara options 'dd/mm/yyyy' ou 'dd/mm/yyyy hh:mm:ss'.
- * @returns {Object} Returns object with mask date.
- */
-function optionsDateTime(options) {
-  /**
-   * @type {Object} object that contains the date mask.
-   */
-  let maskDate;
+      if (!options) return value == '/' ? '-' : value;
+    });
 
-  switch (options?.toLowerCase()) {
-    case 'dd/mm/yyyy':
-      maskDate = {
-        timeZone: 'America/Sao_Paulo',
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric',
-      };
-
-      break;
-    case 'dd/mm/yyyy hh:mm:ss':
-      maskDate = {
-        timeZone: 'America/Sao_Paulo',
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
-        second: 'numeric',
-        hour12: false
-      };
-
-      break;
-    default:
-      maskDate = {
-        timeZone: 'America/Sao_Paulo',
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric',
-      };
+  if (!options) {
+    resultDate = resultDate.reverse().join('').split(' ');
+    return resultDate[1] + ' ' + resultDate[0].split(':').reverse().join(':');
+  } else {
+    if (options.includes('-')) {
+      resultDate = resultDate.reverse().join('').split(' ');
+      return resultDate.length > 1 ? resultDate[1] + ' ' + resultDate[0].split(':').reverse().join(':') : resultDate.join('');
+    } else {
+      return resultDate.join('');
     }
-
-  return maskDate;
+  }
 }
 
 module.exports = {
