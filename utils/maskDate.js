@@ -18,6 +18,70 @@ function optionsDateTime(options) {
       };
 
       break;
+    case 'mm':
+      maskDate = {
+        timeZone: 'America/Sao_Paulo',
+        month: '2-digit',
+      };
+
+      break;
+    case 'mm/yyyy':
+      maskDate = {
+        timeZone: 'America/Sao_Paulo',
+        year: 'numeric',
+        month: '2-digit',
+      };
+
+      break;
+    case 'dd/yyyy':
+      maskDate = {
+        timeZone: 'America/Sao_Paulo',
+        year: 'numeric',
+        day: '2-digit',
+      };
+
+      break;
+    case 'dd/mm':
+      maskDate = {
+        timeZone: 'America/Sao_Paulo',
+        day: '2-digit',
+        month: '2-digit',
+      };
+
+      break;
+    case 'yyyy-mm-dd':
+      maskDate = {
+        timeZone: 'America/Sao_Paulo',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+      };
+
+      break;
+    case 'yyyy-mm':
+      maskDate = {
+        timeZone: 'America/Sao_Paulo',
+        year: 'numeric',
+        month: '2-digit',
+      };
+
+      break;
+    case 'yyyy-dd':
+      maskDate = {
+        timeZone: 'America/Sao_Paulo',
+        year: 'numeric',
+        day: '2-digit',
+      };
+
+      break;
+    case 'mm-dd':
+      maskDate = {
+        timeZone: 'America/Sao_Paulo',
+        month: '2-digit',
+        day: '2-digit',
+      };
+      
+      break;
     case 'dd/mm/yyyy hh:mm:ss':
       maskDate = {
         timeZone: 'America/Sao_Paulo',
@@ -31,15 +95,6 @@ function optionsDateTime(options) {
       };
 
       break;
-    case 'yyyy-mm-dd':
-      maskDate = {
-        timeZone: 'America/Sao_Paulo',
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit',
-      };
-
-      break;
     case 'yyyy-mm-dd hh:mm:ss':
       maskDate = {
         timeZone: 'America/Sao_Paulo',
@@ -50,6 +105,53 @@ function optionsDateTime(options) {
         minute: 'numeric',
         second: 'numeric',
         hour12: false,
+      };
+
+      break;
+    case 'hh:mm:ss':
+      maskDate = {
+        timeZone: 'America/Sao_Paulo',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        hour12: false,
+      };
+
+      break;
+    case 'hh:':
+      maskDate = {
+        timeZone: 'America/Sao_Paulo',
+        hour: 'numeric',
+      };
+
+      break;
+    case 'hh:mm':
+      maskDate = {
+        timeZone: 'America/Sao_Paulo',
+        hour: 'numeric',
+        minute: 'numeric',
+      };
+
+      break;
+    case 'mm:':
+      maskDate = {
+        timeZone: 'America/Sao_Paulo',
+        minute: 'numeric',
+      };
+
+      break;
+    case 'mm:ss':
+      maskDate = {
+        timeZone: 'America/Sao_Paulo',
+        minute: 'numeric',
+        second: 'numeric',
+      };
+
+      break;
+    case 'ss:':
+      maskDate = {
+        timeZone: 'America/Sao_Paulo',
+        second: 'numeric',
       };
 
       break;
