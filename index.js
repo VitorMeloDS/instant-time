@@ -6,6 +6,7 @@ const { optionsDateTime } = require('./utils/maskDate')
  * @returns {String | Function} Returns a string containing the date with the specified format.
  */
 function DateFormat(date, options) {
+
   let resultDate = new Intl.DateTimeFormat('pt-BR', optionsDateTime(options?.toLowerCase()))
     .formatToParts(date).map(({ type, value }) => {
       if (options) return options.includes('-') ? (value == '/' ? '-' : value) : value;
@@ -15,13 +16,13 @@ function DateFormat(date, options) {
 
   if (!options) {
     resultDate = resultDate.reverse().join('').split(' ');
-    return resultDate[1] + ' ' + resultDate[0].split(':').reverse().join(':');
+    return resultDate[1] + ' ' + resultDate[0].replace(',', '').split(':').join(':');
   } else {
     if (options.includes('-')) {
       resultDate = resultDate.reverse().join('').split(' ');
-      return resultDate.length > 1 ? resultDate[1] + ' ' + resultDate[0].split(':').reverse().join(':') : resultDate.join('');
+      return resultDate.length > 1 ? resultDate[1] + ' ' + resultDate[0].split(':').reverse().join(':').replace(',', '') : resultDate.join('');
     } else {
-      return resultDate.join('');
+      return resultDate.join('').replace(',', '');
     }
   }
 }
